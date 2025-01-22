@@ -30,7 +30,9 @@ const Patient = () => {
                         </div>
                     )
                  : (
-                    <div className="">Loading...</div>
+                    <div className="w-full flex items-center justify-center ">
+                        <div className="loader"></div>
+                    </div>
                 )}
             </div>
         </div>

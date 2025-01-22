@@ -4,11 +4,10 @@ import { AppContext } from "../../Utilities/Context";
 import Lab from './Lab';
 
 const Profile = () => {
-    const {profile,pendProf} = useContext(AppContext)
+    const {profile} = useContext(AppContext)
     
     return ( 
         <div className="flex flex-col rounded-2xl shadow bg-white items-start justify-start gap-y-5 ">
-            {pendProf ? (
                 <div className="w-full p-5 flex flex-col gap-y-5 bg-white ">
                     <div className="flex flex-col gap-y-3 items-center justify-center">
                         <img src={profile.profile_picture} alt="" className="w-[100px] h-[100px] " />
@@ -63,9 +62,6 @@ const Profile = () => {
                     </div>
                     <div className="bg-[##03F2D1] flex items-center justify-center text-[#092534] w-full bg-[#00F3D3] rounded-[9999px] py-2 px-5 ">Show All Information </div> 
                 </div>
-            ):(
-                <div className="">Profile Loading....</div>
-            )}
             <Lab />
         </div>
      );
