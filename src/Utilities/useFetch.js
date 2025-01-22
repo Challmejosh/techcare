@@ -17,9 +17,8 @@ const useFetch = (url) => {
     .then((data)=>{
         setData(data)
         setPending(true)
-        console.log(data)
     })
-    },[url])
+    },[url,auth])
     return {pending,data}
 }
  

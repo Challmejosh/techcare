@@ -13,7 +13,6 @@ const Context = ({children}) => {
     const handleProfile = (prof)=>{
         const check = worker.find(item => item === prof )
         if(check){
-            console.log(check.lab_results)
             setProfile(check)
             setPendProf(true)
         }

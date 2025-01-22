@@ -1,4 +1,4 @@
-import { FaSearch } from "react-icons/fa";
+import { FaSearch,FaEllipsisH } from "react-icons/fa";
 import {AppContext} from '../../Utilities/Context';
 import {useContext} from 'react'
 const Patient = () => {
@@ -6,7 +6,7 @@ const Patient = () => {
     return ( 
         <div className="w-full border rounded-2xl p-5 bg-white shadow-sm ">
             <div className="flex items-center justify-between ">
-                <h1 className="text-lg  text-[#092534] ">Patience</h1>
+                <h1 className="text-lg font-semibold text-[#092534] ">Patience</h1>
                 <FaSearch className="text-[#092534] " />
             </div>
             <div className="">
@@ -18,12 +18,12 @@ const Patient = () => {
                                     <div onClick={()=>handleProfile(patient)} className="flex gap-x-3 items-center justify-start ">
                                         <img src={patient.profile_picture} alt="" className="rounded-full w-[50px] h-[50px] object-cover " />
                                         <div className="flex flex-col items-start justify-center ">
-                                            <p className="text-[#092534] ">{patient.name}</p>
+                                            <p className="text-[#092534] font-semibold ">{patient.name}</p>
                                             <p className="text-xs ">{patient.gender}, {patient.age}</p>
                                         </div>
                                     </div>
                                     <div className="">
-                                        option
+                                        <FaEllipsisH />
                                     </div>
                             </div>
                             ))}

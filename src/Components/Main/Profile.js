@@ -7,14 +7,14 @@ const Profile = () => {
     const {profile,pendProf} = useContext(AppContext)
     
     return ( 
-        <div className="flex flex-col items-start justify-start gap-y-5 ">
+        <div className="flex flex-col rounded-2xl shadow bg-white items-start justify-start gap-y-5 ">
             {pendProf ? (
-                <div className="w-full flex flex-col gap-y-5 bg-white ">
+                <div className="w-full p-5 flex flex-col gap-y-5 bg-white ">
                     <div className="flex flex-col gap-y-3 items-center justify-center">
                         <img src={profile.profile_picture} alt="" className="w-[100px] h-[100px] " />
-                        <h1 className="">{profile.name} </h1>
+                        <h1 className="text-[#092534] text-lg font-semibold">{profile.name} </h1>
                     </div>
-                    <div className="flex items-start flex-col justify-center gap-y-4 bg-[#000] ">    
+                    <div className="flex items-start flex-col justify-center gap-y-4  ">    
                         <div className="flex items-center justify-start gap-x-2 p-3 ">
                             <div className=" bg-[#f4f7f7] p-2 rounded-full flex items-center justify-center">
                                 <FaCalendar size={24} className="text-[#092534] " />
